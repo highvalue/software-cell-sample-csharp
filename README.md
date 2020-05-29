@@ -18,7 +18,7 @@ This can be achieved by following these concepts:
 
 # C# Project Structure
 
-![](doc/img/cell1.png)
+![](doc/img/cell2.png)
 
 ## High Level Project Structure
 
