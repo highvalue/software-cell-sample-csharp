@@ -61,7 +61,7 @@ The default C# solution consists of three C# projects:
 
 # Software Cell
 
-![overview](doc/img/cell.png)
+![](doc/img/cell2.png)
 
 ## Gate
 
