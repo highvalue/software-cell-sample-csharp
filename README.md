@@ -18,8 +18,6 @@ This can be achieved by following these concepts:
 
 # C# Project Structure
 
-![](doc/img/cell2.png)
-
 ## High Level Project Structure
 
 ![](doc/img/csharp1.png)
@@ -65,23 +63,13 @@ The default C# solution consists of three C# projects:
 
 ## Gate
 
-![](doc/img/gate.png)
-* add gate symbol (rectangle)
-
 External actors trigger activities through a Gate. This folder can contain Controllers, EventHandlers, CLIs etc.
 
 - Gates ensure schematically correct input data and transform and call the Core functionality.
 - Gates don't implement business code.
 - Testing a Gates behavior in isolation should not depend on mocked providers, only on mocked core services
 
-TODO: Show SampleAPI Gate stuff
-* screenshots: Call interface from Core
-* different controllers use the same business logic from the core
-
 ## Core
-
-![](doc/img/core.png)
-* add core symbol (cell)
 
 Contains the pure business logic and rules. Is called by Gates and calls Providers.
 
@@ -89,21 +77,15 @@ Contains the pure business logic and rules. Is called by Gates and calls Provide
 - Ensures business rules, not technical (i.e. persitence) rules.
 - Exposes Interfaces for Gates to use and for mocking in test scenarios
 - Should be the dominant force in the system -> Contracts, Gates and Providers adapt to the business needs and use DTOs and objects from the Core
- 
-TODO: Show SampleAPI Core stuff
-* call providers
+
 
 ## Provider
-
-![](doc/img/provider.png)
-* add provider symbol (triangle)
 
 Encapsulates knowledge of persistence or transport technologies and communicates with external systems
 
 - Exposes Interfaces expected by the Core, but holds the Interfaces itself in order to reduce confusion.
 - Maps to Core DTOs and objects
 - Acts as Anti-Corruption layer and spilling zone for nasty technical transformations
-TODO: Show SampleAPI Provider stuff
 
 
 ## Summary
@@ -113,19 +95,6 @@ A software cell can be devided into two parts: core + membrane
 The membrane acts as a spill zone or an anti-corruption layer to guarantee modular components that are testable.
 
 External contracts make sure that all agreements between services are explicit. This allows versioning and guarantees type safety.
-
-
-## REmove
-
-TODO: Show evolutionary paths and optional Folders areas
-
-
-This is achieved by separating a service in four key areas, named **Contract**, **Gate**, **Core** and **Provider**
-
-TODO: Show circular diagram and introduce concepts shortly by their concers
-TODO: Show SampleAPI Folder structure and link to Repo
-
-
 
 
 # Contract
@@ -143,7 +112,13 @@ Across projects we suggest hard contracts.
 
 # Fractal Design
 
-TODO
+Fractals exhibit similar patterns at increasingly small scales called self similarity, also known as expanding symmetry or unfolding symmetry.
+
+A Fractal is a geometrical figure, each part of which has the same statistical character as the whole. They are useful in modelling structures (such as snowflakes) in which similar patterns recur at progressively smaller scales, and in describing partly random or chaotic phenomena such as crystal growth and galaxy formation.
+
+![](img/fractal1.png)
+
+![](img/fractal2.png)
 
 
 
