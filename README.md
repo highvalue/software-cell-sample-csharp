@@ -99,16 +99,23 @@ External contracts make sure that all agreements between services are explicit. 
 
 # Contract
 
-TODO: describe contract like the other 
-TODO: Show SampleAPI contract stuff
+**The Concept of "notarization" Applied to Software**
 
-**What is the benefit of creating a separate `Contracts` project?**
+By putting data definitions of external API endpoints (e.g. Controllers) into a separate *contracts* project, these definitions are clearly separated and stripped from any business code and are explicit to any outside party.
 
-> 
+It is like an agreement beteween two parties, whereas the *contracts* project plays the role of a notary, witnessing agreements between both parties.
 
-Soft Contracts or Hard Contracts - You decide!
-Across projects we suggest hard contracts. 
+There are two types of contracts:
+* explicit contracts - managed by a third party
+* implicit contracts - API endpoints may not have a documented interface and parties may not be fully aware 
 
+**Original Definition**
+
+A notary is a person authorised to perform acts in legal affairs, in particular witnessing signatures on documents.
+
+Documents are notarized to deter fraud and to ensure they are properly executed. An impartial witness (the notary) identifies signers and makes sure they have entered into agreements knowingly and willingly. Loan documents including deeds, affidavits, contracts, powers of attorney are very common documents needing notarization.
+
+![](doc/img/notary.png)
 
 # Fractal Design
 
@@ -116,9 +123,9 @@ Fractals exhibit similar patterns at increasingly small scales called self simil
 
 A Fractal is a geometrical figure, each part of which has the same statistical character as the whole. They are useful in modelling structures (such as snowflakes) in which similar patterns recur at progressively smaller scales, and in describing partly random or chaotic phenomena such as crystal growth and galaxy formation.
 
-![](img/fractal1.png)
+![](doc/img/fractal1.png)
 
-![](img/fractal2.png)
+![](doc/img/fractal2.png)
 
 
 
@@ -137,33 +144,28 @@ As an idea/product/company grows, value-maximizing behavior changes dramatically
 
 # Code Classifications
 
+* A: business code
+* B: technology code
+* C: mixed code (business + technology)
+* C: neutral code 
 
-## Core
-* may include Contracts (optional)
-* implements usecases (business logic, business validation, business usecases)
-* defines domain-objects
-* uses providers to access external resources (with the outside world)
+**business code**
+* pure business logic and rules
 
-## Gate
-* incomming requests (e.g. controllers)
-* membrane for the core: validates contract schema, maps to core domain-object 
-* includes: Contract, core.domain-object
+**technology code**
+* pure technology code, like open source libraries (MongoDB, RabbitMQ, ...)
+* do not carry specific knowledge from the business domain
+* common code that focuses on technical aspects and has abstractions that are useful for many scenarios
+* like a **retail** product (suitable for the masses)
+ 
+**mixed code**
+* business code and technology code mixed
+* is focused on technical aspects (like DB, MessageQueues, Middlewares, etc) but carries specific knowledge from the business domain (http middleware conventions, validation rules, etc)
+* this code could be compared to a **tailored** solution (cannot be easily shared with other projects, because it is so specific to the usecase)
 
-## Provider
-* handles external communication on behalf of the core
-* membrane for the core: validates contract schema, maps from/to domain-object
-* provides interfaces for the core to consume (america first approach, provider second) 
-* includes Contract, includes domain-object
-
-## Tech
-* cross cutting concerns, common technical implementations specific to the technology landscape of the project (may have strong project specific conventions)
-* middlewares, technical libraries fine-tuned for this technical landscape
-* mainly focused on technical aspects (like DB, MessageQueues, etc) but may also carry specific elements from the business domain (http middleware conventions)
-
-## Utils
-* completly neutral, no cross-dependencies to internal projects, blood type 0, could be useful for everybody in the world
-
-
+**neutral code**
+* completly neutral, no cross-dependencies to other projects
+* can be easily included and is ready to be used without much configuration
 
 
 
