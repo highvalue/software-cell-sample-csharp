@@ -168,9 +168,13 @@ TODO
 
 # 3X Model
 
-* Explore
-* Expand
-* Extract
+**Kent Beck**
+
+As an idea/product/company grows, value-maximizing behavior changes dramatically:
+
+* **Explore** — to overcome disinterest, try many small experiments.
+* **Expand** — to overcome bottlenecks to scaling, ease the limitations of the next rate-limiting resource.
+* **Extract** — to sustain growth, continually increase profitability while you finish growing.
 
 ![](doc/img/3x.png)
 
