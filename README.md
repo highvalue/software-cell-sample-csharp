@@ -25,9 +25,9 @@ This can be achieved by following these concepts:
 ![](doc/img/csharp1.png)
 
 The default C# solution consists of three C# projects:
-* SampleAPI - the regular code lives here
-* SampleAPI.Contracts - the place where to put external model definitions
-* SampleAPI.Tests - put tests in here
+* **SampleAPI** - the regular code lives here
+* **SampleAPI.Contracts** - the place where to put external model definitions
+* **SampleAPI.Tests** - put tests in here
 
 
 ## Project Folder Structure
