@@ -32,7 +32,7 @@ The default C# solution consists of three C# projects:
 
 ## Project Folder Structure
 
-### Cell Structure
+**Cell Structure**
 ![](doc/img/csharp2.png)
 
 * 1: Core - contains the pure business logic and rules
@@ -41,7 +41,7 @@ The default C# solution consists of three C# projects:
 
 [read more](#Software-Cell)
 
-### Code Classifications
+**Code Classifications**
 
 ![](doc/img/csharp3.png)
 
