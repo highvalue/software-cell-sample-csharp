@@ -35,9 +35,9 @@ The default C# solution consists of three C# projects:
 ### Cell Structure
 ![](doc/img/csharp2.png)
 
-* Core - contains the pure business logic and rules
-* Gate - this is the entry point for external calls (controllers, EventHandlers, ...)
-* Provider - encapsulates knowledge and communication with external systems
+* 1: Core - contains the pure business logic and rules
+* 2: Gate - this is the entry point for external calls (controllers, EventHandlers, ...)
+* 3: Provider - encapsulates knowledge and communication with external systems
 
 [read more](#Software-Cell)
 
