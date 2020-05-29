@@ -54,7 +54,7 @@ The default C# solution consists of three C# projects:
 
 ### SampleAPI Example
 
-![](doc/img/csharp-detail.png)
+![](doc/img/csharp-detailed.png)
 
 
 
