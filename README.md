@@ -32,8 +32,7 @@ The default C# solution consists of three C# projects:
 
 ## Project Folder Structure
 
-### Software Cell
-
+### Cell Structure
 ![](doc/img/csharp2.png)
 
 * Core - contains the pure business logic and rules
