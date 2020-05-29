@@ -54,27 +54,8 @@ The default C# solution consists of three C# projects:
 
 ### SampleAPI Example
 
-![](doc/img/csharp4.png)
+![](doc/img/csharp-detail.png)
 
-
-```
-* Core
-	* <UseCase1>
-	* <UseCase2>
-	* <UseCase3>
-* Gate
-    * ComputerRestController.cs
-	* ComputerDaprController.cs
-* Provider
-	* ComputerRepository.cs
-	* MachineProvider.cs
-* Tech
-    * MogoDB
-    * OAuth
-* Utils
-    * StringExtensions.cs
-    * UrlHelper.cs
-```
 
 
 
