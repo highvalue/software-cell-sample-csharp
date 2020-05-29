@@ -125,9 +125,6 @@ A Fractal is a geometrical figure, each part of which has the same statistical c
 
 ![](doc/img/fractal1.png)
 
-![](doc/img/fractal2.png)
-
-
 
 # 3X Model
 
