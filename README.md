@@ -5,16 +5,7 @@
 - Simple Ruleset
 - Clear Separation of Concerns
 - Supports an Evolutionary Approach
-- Supports Encapsulated Modules (see [Testing is a first class citizen](#Testing-is-a-first-class-citizen))
-
-This can be achieved by following these concepts:
-
-* [Software Cell](#Software-Cell)
-* [Contracts](Contracts)
-* [Fractal Design](#Fractal-Design)
-* [3X Model](#3X-Model)
-* [Code Classifications](#Code-Classifications)
-
+- Supports Encapsulated Modules (esting is a first class citizen)
 
 # C# Project Structure
 
